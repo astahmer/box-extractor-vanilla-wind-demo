@@ -1,10 +1,10 @@
 {
-    "name": "box-extractor-ve-demo",
+    "name": "box-extractor-vanilla-wind-demo",
     "private": true,
     "version": "0.0.1",
     "repository": {
         "type": "git",
-        "url": "https://github.com/astahmer/box-extractor-ve-demo.git"
+        "url": "https://github.com/astahmer/box-extractor-vanilla-wind-demo.git"
     },
     "author": "Alexandre Stahmer <alexandre.stahmer@gmail.com>",
     "scripts": {
@@ -14,7 +14,7 @@
         "format": "prettier --write \"./{src,tests}/**/*\""
     },
     "stackblitz": {
-        "startCommand": "pnpm build"
+        "startCommand": "pnpm build && pnpm preview"
     },
     "dependencies": {
         "@box-extractor/vanilla-theme": "^0.3.0",
