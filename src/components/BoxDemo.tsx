@@ -1,5 +1,5 @@
-import { lightMode, darkMode } from "@box-extractor/vanilla-theme/css";
 import { Box } from "./Box";
+import { darkMode, lightMode } from "./theme";
 
 export function BoxDemo() {
     return (
@@ -14,12 +14,12 @@ export function BoxDemo() {
             </div>
 
             <Box color={{ hover: "green.100" }}>condition.hover green.100</Box>
-            <Box __color="#5f9ea0">escape hatch cadetblue #5f9ea0</Box>
-            <Box _hover={{ cursor: "pointer" }}>_hover cursor.pointer</Box>
-            <Box color={{ default: "blue.200", hover: "green.400" }} _hover={{ color: "red.300" }}>
+            <Box color="#5f9ea0">escape hatch cadetblue #5f9ea0</Box>
+            <Box hover={{ cursor: "pointer" }}>_hover cursor.pointer</Box>
+            <Box color={{ default: "blue.200", hover: "green.400" }} hover={{ color: "red.300" }}>
                 _hover cursor.pointer with default from basic condition object
             </Box>
-            <Box color="pink.300" _hover={{ color: "yellow.400" }}>
+            <Box color="pink.300" hover={{ color: "yellow.400" }}>
                 _hover cursor.pointer with default from prop string
             </Box>
             <Box color={{ desktop: "red.400", tablet: "green.400", mobile: "blue.300" }}>color/responsive rgb</Box>

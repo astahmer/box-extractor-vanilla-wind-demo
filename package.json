@@ -9,10 +9,7 @@
     "author": "Alexandre Stahmer <alexandre.stahmer@gmail.com>",
     "scripts": {
         "dev": "vite",
-        "dev:without": "vite --config=./vite.config.without-box-extractor.ts",
-        "build:with-box-extractor": "echo 'Running vite build WITH ✅  @box-extractor/vanilla-extract optimizations...\n' && start_time=`date +%s` && vite build && end_time=`date +%s` && echo build execution time was `expr $end_time - $start_time` s. && echo '\n-----------------------'",
-        "build:without-box-extractor": "echo 'Running vite build WITHOUT ❌ @box-extractor/vanilla-extract optimizations...\n' && start_time=`date +%s` && vite --config=./vite.config.without-box-extractor.ts build && end_time=`date +%s` && echo build execution time was `expr $end_time - $start_time` s. && echo '\n-----------------------'",
-        "build": "DEBUG=box-ex:ve:result pnpm build:with-box-extractor && pnpm build:without-box-extractor",
+        "build": "vite build",
         "preview": "vite preview",
         "format": "prettier --write \"./{src,tests}/**/*\""
     },
@@ -20,21 +17,18 @@
         "startCommand": "pnpm build"
     },
     "dependencies": {
-        "@box-extractor/core": "0.3.0",
-        "@box-extractor/vanilla-extract": "0.2.6",
-        "@box-extractor/vanilla-theme": "0.2.7",
-        "@vanilla-extract/css": "file:./ve-fork-tgz/vanilla-extract-css.tgz",
-        "@vanilla-extract/sprinkles": "^1.5.1",
-        "@vanilla-extract/vite-plugin": "^3.7.0",
+        "@box-extractor/vanilla-theme": "^0.3.0",
+        "@box-extractor/vanilla-wind": "^0.2.0",
+        "@vanilla-extract/css": "^1.9.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
-        "@types/react": "^18.0.15",
-        "@types/react-dom": "^18.0.6",
-        "@vitejs/plugin-react": "^2.0.0",
-        "prettier": "^2.7.1",
-        "typescript": "4.9.4",
-        "vite": "^3.0.4"
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "@vitejs/plugin-react": "^3.1.0",
+        "prettier": "^2.8.4",
+        "typescript": "4.9.5",
+        "vite": "^4.1.1"
     }
 }

@@ -22,7 +22,9 @@
         // "isolatedModules": true, // https://preconstruct.tools/guides/building-typescript-packages
         "noEmit": true,
         "jsx": "react-jsx",
-        "types": ["vite/client"]
+        "types": ["vite/client"],
+        "declaration": true,
+        "declarationMap": true
     },
     "types": ["node", "vitest/importMeta"],
     //
